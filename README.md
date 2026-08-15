@@ -53,6 +53,15 @@ git clone <this-repo> my-project-wiki && cd my-project-wiki
 rm -rf .git && git init && git add -A && git commit -m "init wiki"
 ```
 
+**Or use the `/wiki-init` skill** — installs the template into any repo in one command,
+including path fixups and the root `CLAUDE.md` pointer. Set it up once:
+
+```bash
+mkdir -p ~/.claude/skills && cp -R install/wiki-init ~/.claude/skills/wiki-init
+```
+
+Then `/wiki-init` in any project. See [install/README.md](install/README.md).
+
 **Or keep it as a subdirectory** of an existing project — a `wiki/` alongside your code —
 by copying `AGENTS.md`, `CLAUDE.md`, `raw/`, `wiki/`, and `templates/` into it. For a
 software project, this is often the better shape: the wiki lives next to the code it
